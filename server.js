@@ -20,7 +20,7 @@ const response_type = `code`;
 const youtube_scope = `https://www.googleapis.com/auth/youtube.readonly`;
 
 
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 //Reusable function to get access_token, used for both youtube api and spotify api
 
