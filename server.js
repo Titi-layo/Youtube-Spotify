@@ -20,7 +20,7 @@ const response_type = `code`;
 const youtube_scope = `https://www.googleapis.com/auth/youtube.readonly`;
 
 
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 //Reusable function to get access_token, used for both youtube api and spotify api
 
@@ -80,7 +80,7 @@ async function addToPlaylist(playlistID,refresh_token,uris)
 }
 
 
-app.get('/',function(req, res)
+app.get('/login',function(req, res)
 {
 
   res.redirect(`https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.YoutubeclientId}&redirect_uri=${process.env.YoutuberedirectUrl}&response_type=${response_type}&scope=${youtube_scope}`)
