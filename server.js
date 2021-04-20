@@ -84,7 +84,7 @@ app.get('/',function(req, res)
 {
 
   res.redirect(`https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.YoutubeclientId}&redirect_uri=${process.env.YoutuberedirectUrl}&response_type=${response_type}&scope=${youtube_scope}`)
-   
+   console.log('hi')
 })
 
 
