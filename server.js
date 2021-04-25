@@ -360,15 +360,11 @@ else
 }
 
 createPlaylist();
+res.end();
 
 })
 
 
-
-app.get('/addToPlaylist',function(req, res)
-{
-  
-})
 
 app.listen(PORT);
 
