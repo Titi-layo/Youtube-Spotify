@@ -1,0 +1,29 @@
+
+*
+{
+  margin:0;
+  padding: 0
+}
+
+
+
+#wrapper
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items : center;
+  height : 100vh;
+  background-color: pink
+}
+
+
+.image
+{
+  width: 20%;
+}
+
+#image-wrapper
+{
+ text-align: center;
+}

@@ -80,7 +80,7 @@ async function addToPlaylist(playlistID,refresh_token,uris)
 }
 
 
-app.get('/',function(req, res)
+app.get('/login',function(req, res)
 {
 
   console.log('hi, i reached the root!!!')
