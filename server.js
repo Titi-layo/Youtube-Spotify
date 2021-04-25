@@ -191,13 +191,18 @@ app.get('/getSpotifyUris/',function(req, res)
       headers: { 'Authorization' : `Bearer ${token}`
      }})
 
-     const vals = await search.json();
      
 
-     if(vals.tracks.items.length !== 0)
+     if(search.status === 200)
      {
-       uris.push(vals.tracks.items[0].uri)
+          const vals = await search.json();
+
+          if(vals.tracks.items.length !== 0)
+        {
+          uris.push(vals.tracks.items[0].uri)
+        }
      }
+
      return 1;
 
     })
