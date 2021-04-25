@@ -83,8 +83,9 @@ async function addToPlaylist(playlistID,refresh_token,uris)
 app.get('/',function(req, res)
 {
 
+  console.log('hi, i reached the root!!!')
   res.redirect(`https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.YoutubeclientId}&redirect_uri=${process.env.YoutuberedirectUrl}&response_type=${response_type}&scope=${youtube_scope}`)
-   console.log('hi')
+  
 })
 
 
