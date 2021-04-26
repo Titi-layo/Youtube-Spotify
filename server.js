@@ -16,6 +16,8 @@ const youtube_token_url = `https://oauth2.googleapis.com/token`
 //const youtubedl = require('youtube-dl');
 var LikedDetails = [];
 var uris = [];
+var test;
+console.log("The value of test is : ", test);
 const response_type = `code`;
 const youtube_scope = `https://www.googleapis.com/auth/youtube.readonly`;
 
@@ -168,7 +170,7 @@ const LikedVideos = await resp.json();
 app.get('/getSpotifyUris/',function(req, res)
 {
 
-  
+  //var uris = [];
   
    (async function getURIs()
    {
@@ -219,6 +221,7 @@ app.get('/getSpotifyUris/',function(req, res)
 
 app.get('/authentication/',function(req, res)
 {
+  test = 5;
 
 const getUserInfo = async () =>
 {
@@ -365,7 +368,7 @@ else
 }
 
 createPlaylist();
-res.end()
+res.end();
 //res.redirect('http://localhost:8000/end/');
 
 })
