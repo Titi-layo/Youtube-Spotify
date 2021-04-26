@@ -365,13 +365,15 @@ else
 }
 
 createPlaylist();
+res.end()
+//res.redirect('http://localhost:8000/end/');
 
 })
 
 
 app.get('/end/',function(req, res)
 {
-
+  res.send('i reached here')
 })
 
 
