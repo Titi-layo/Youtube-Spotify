@@ -172,7 +172,7 @@ const LikedVideos = await resp.json();
 app.get('/getSpotifyUris/',function(req, res)
 {
 
-  //var uris = [];
+   uris = [];
   
    (async function getURIs()
    {
@@ -370,15 +370,14 @@ else
 }
 
 createPlaylist();
-res.end();
-//res.redirect('http://localhost:8000/end/');
+res.redirect(process.env.end);
 
 })
 
 
 app.get('/end/',function(req, res)
 {
-  res.send('i reached here')
+  res.end();
 })
 
 
