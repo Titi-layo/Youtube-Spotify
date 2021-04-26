@@ -14,6 +14,8 @@ const getInfo = require('get-artist-title');
 const spotify_token_url = `https://accounts.spotify.com/api/token`
 const youtube_token_url = `https://oauth2.googleapis.com/token`
 //const youtubedl = require('youtube-dl');
+
+console.log("Hi i reached here once");
 var LikedDetails = [];
 var uris = [];
 var test;
