@@ -231,7 +231,12 @@ const resp = await fetch('https://api.spotify.com/v1/me',{
 
 })
 
+
+
 const userID = await resp.json();
+
+console.log(userID.id);
+
 return {id: userID.id , refresh_token: token.refresh_token}
 }
 
@@ -360,10 +365,14 @@ else
 }
 
 createPlaylist();
-res.end();
 
 })
 
+
+app.get('/end/',function(req, res)
+{
+
+})
 
 
 app.listen(PORT);
