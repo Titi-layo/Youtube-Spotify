@@ -113,6 +113,7 @@ const resp = await fetch('https://www.googleapis.com/youtube/v3/videos?part=snip
   
 const LikedVideos = await resp.json();
 
+LikedDetails = [];
 
   //if(process.env.NODE_ENV)
   // {
