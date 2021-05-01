@@ -7,7 +7,7 @@ Server side code, which extracts liked music from youtube account of authorised 
 * Node js
 * NPM
 * Authorized spotify applicatiion (For spotify client ID and client secret) - [Spotify app Authorization](https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app)
-* Youtube developer account - (For Youtube client ID and client secret) - [Youtube app Authorization](https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps#php)
+* Authorized youtube application - (For Youtube client ID and client secret) - [Youtube app Authorization](https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps#php)
 * Port 8000 on local machine
 
 # Getting Started
