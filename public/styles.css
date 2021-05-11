@@ -1,29 +1,40 @@
-
-*
-{
-  margin:0;
-  padding: 0
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: 0;
 }
 
-
-
-#wrapper
-{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items : center;
-  height : 100vh;
-  background-color: pink
+body {
+	height: 100vh;
+	background-image: url("youtube.png"), url("spotify.png");
+	background-repeat: repeat-x, repeat-x;
+	background-position: top, bottom;
+	background-size: 30px, 50px;
 }
 
-
-.image
-{
-  width: 20%;
+#wrapper {
+	display: flex;
+	align-items: center;
+	/* background-color: darkcyan; */
+	height: 100vh;
 }
 
-#image-wrapper
-{
- text-align: center;
+#form-wrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+	border-radius: 30px;
+	width: 100vw;
+	/* background-color: blue; */
+}
+
+#button-id {
+	padding: 15px;
+	background-color: red;
+	border-radius: 15px;
+	flex-grow: 0.5;
+}
+
+#hero {
+	font-size: 3rem;
 }
