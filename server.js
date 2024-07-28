@@ -260,7 +260,7 @@ app.get("/authentication", function (req, res) {
     };
   };
 
-  const createPlaylist = async () => {
+  const createPlaylist = (async () => {
     console.log("i'm in check playlist");
     const input = await checkPlaylist();
 
@@ -327,11 +327,11 @@ app.get("/authentication", function (req, res) {
         console.log("Your youtube likes playlist is up to date!!!");
       }
     }
-  };
+  })();
 
-  createPlaylist().then(() => {
-    res.redirect(process.env.end);
-  });
+  //   createPlaylist().then(() => {
+  //     res.redirect(process.env.end);
+  //   });
 });
 
 app.get("/end", function (req, res) {
