@@ -327,6 +327,8 @@ app.get("/authentication", function (req, res) {
         console.log("Your youtube likes playlist is up to date!!!");
       }
     }
+
+    res.redirect(process.env.end);
   })();
 
   //   createPlaylist().then(() => {
