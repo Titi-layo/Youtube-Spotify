@@ -334,7 +334,7 @@ app.get("/authentication", function (req, res) {
   });
 });
 
-app.get("/end/", function (req, res) {
+app.get("/end", function (req, res) {
   res.send("You reached the end :)");
 });
 
