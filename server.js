@@ -321,7 +321,7 @@ app.get("/authentication", function (req, res) {
           input.refresh_token,
           tobeAdded
         );
-        console.log(output);
+        console.log(JSON.stringify(output));
       } else {
         console.log("Your youtube likes playlist is up to date!!!");
       }
