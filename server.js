@@ -206,7 +206,7 @@ app.get("/getSpotifyUris/", function (req, res) {
   })();
 });
 
-app.get("/authentication/", function (req, res) {
+app.get("/authentication", function (req, res) {
   test = 5;
 
   const getUserInfo = async () => {
@@ -333,7 +333,7 @@ app.get("/authentication/", function (req, res) {
 });
 
 app.get("/end/", function (req, res) {
-  //res.sendFile("index.html");
+  res.end;
 });
 
 app.listen(PORT);
