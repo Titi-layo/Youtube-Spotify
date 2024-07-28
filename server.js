@@ -18,7 +18,7 @@ var uris = [];
 var test;
 console.log("The value of test is : ", test);
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 //Reusable function to get access_token, used for both youtube api and spotify api
 
