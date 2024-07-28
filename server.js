@@ -329,8 +329,9 @@ app.get("/authentication", function (req, res) {
     }
   };
 
-  createPlaylist();
-  res.redirect(process.env.end);
+  createPlaylist().then(() => {
+    res.redirect(process.env.end);
+  });
 });
 
 app.get("/end/", function (req, res) {
