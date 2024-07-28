@@ -333,7 +333,7 @@ app.get("/authentication", function (req, res) {
 });
 
 app.get("/end/", function (req, res) {
-  res.end;
+  res.send("You reached the end :)");
 });
 
 app.listen(PORT);
