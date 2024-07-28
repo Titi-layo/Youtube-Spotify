@@ -261,6 +261,7 @@ app.get("/authentication", function (req, res) {
   };
 
   const createPlaylist = async () => {
+    console.log("i'm in check playlist");
     const input = await checkPlaylist();
 
     if (input.Exists === false) {
