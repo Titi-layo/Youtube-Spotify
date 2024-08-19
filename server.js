@@ -61,7 +61,7 @@ app.get("/authentication_tube/", function (req, res) {
       }
     });
 
-    consolelog("These are the liked details", likedDetails);
+    console.log("These are the liked details", likedDetails);
 
     res.redirect(process.env.getSpotifyUris);
   })();
