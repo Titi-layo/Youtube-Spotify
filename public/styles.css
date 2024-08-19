@@ -1,40 +1,38 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
 }
 
 body {
-	height: 100vh;
-	background-image: url("youtube.png"), url("spotify.png");
-	background-repeat: repeat-x, repeat-x;
-	background-position: top, bottom;
-	background-size: 30px, 50px;
+  height: 100vh;
+  background-image: url("youtube.png"), url("spotify.png");
+  background-repeat: repeat-x, repeat-x;
+  background-position: top, bottom;
+  background-size: 30px, 50px;
 }
 
 #wrapper {
-	display: flex;
-	align-items: center;
-	/* background-color: darkcyan; */
-	height: 100vh;
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
 
 #form-wrapper {
-	display: flex;
-	justify-content: space-around;
-	align-items: flex-end;
-	border-radius: 30px;
-	width: 100vw;
-	/* background-color: blue; */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  border-radius: 30px;
+  width: 100vw;
 }
 
 #button-id {
-	padding: 15px;
-	background-color: red;
-	border-radius: 15px;
-	flex-grow: 0.5;
+  padding: 15px;
+  background-color: red;
+  border-radius: 15px;
+  flex-grow: 0.5;
 }
 
 #hero {
-	font-size: 3rem;
+  font-size: 3rem;
 }
