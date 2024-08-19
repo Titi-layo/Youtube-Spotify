@@ -91,8 +91,8 @@ app.get("/getSpotifyUris/", function (req, res) {
       if (searchResponse.status === 200) {
         const searchResult = await searchResponse.json();
 
-        if (vals.tracks.items.length !== 0) {
-          return vals.tracks.items[0].uri;
+        if (searchResult.tracks.items.length !== 0) {
+          return searchResult.tracks.items[0].uri;
           //   uris.push(vals.tracks.items[0].uri);
         }
       }
