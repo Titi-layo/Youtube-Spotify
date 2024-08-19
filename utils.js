@@ -1,4 +1,7 @@
 /**function to get access_token, used for both youtube api and spotify api */
+
+const spotify_token_url = `https://accounts.spotify.com/api/token`;
+
 async function getToken(url, code, redirect, clientID, clientSecret) {
   const result = await fetch(url, {
     method: "POST",
