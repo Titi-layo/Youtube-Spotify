@@ -61,6 +61,8 @@ app.get("/authentication_tube/", function (req, res) {
       }
     });
 
+    consolelog("These are the liked details", likedDetails);
+
     res.redirect(process.env.getSpotifyUris);
   })();
 });
@@ -99,6 +101,8 @@ app.get("/getSpotifyUris/", function (req, res) {
     });
 
     uris = await Promise.all(uriPromise);
+
+    console.log("These are the uris", uris);
 
     res.redirect(
       `https://accounts.spotify.com/authorize?client_id=${process.env.clientId}&response_type=${response_type}&redirect_uri=${process.env.spotifyAuth}&scope=user-read-private%20playlist-modify-private%20user-read-email%20playlist-modify-public&state=34fFs29kd09`
