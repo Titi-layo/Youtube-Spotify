@@ -42,7 +42,7 @@ app.get("/authentication_tube/", function (req, res) {
     );
 
     const resp = await fetch(
-      "https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&myRating=like&maxResults=300",
+      "https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&myRating=like&maxResults=50",
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token.access_token}` },
