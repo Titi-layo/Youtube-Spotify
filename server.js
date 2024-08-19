@@ -17,7 +17,7 @@ const response_type = `code`;
 const youtube_scope = `https://www.googleapis.com/auth/youtube.readonly`;
 
 const likedDetails = [];
-const uris = [];
+let uris = [];
 
 app.use(express.static(path.join(__dirname, "public")));
 
