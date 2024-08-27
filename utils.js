@@ -1,14 +1,26 @@
 /**function to get access_token, used for both youtube api and spotify api */
 
+const {} = require("./config");
 const spotify_token_url = `https://accounts.spotify.com/api/token`;
 
-async function getToken(url, code, redirect, clientID, clientSecret) {
+async function getToken(
+  url,
+  grantType,
+  clientID,
+  clientSecret,
+  code,
+  redirect
+) {
+  const body = `grant_type=${grantType}&client_id=${clientID}&client_secret=${clientSecret}`;
+  if (code) {
+    body += `&code=${code}&redirect_uri=${redirect}`;
+  }
   const result = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
     },
-    body: `grant_type=authorization_code&code=${code}&redirect_uri=${redirect}&client_id=${clientID}&client_secret=${clientSecret}`,
+    body,
   });
 
   const response = await result.json();
