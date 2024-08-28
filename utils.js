@@ -11,7 +11,7 @@ async function getToken(
   code,
   redirect
 ) {
-  const body = `grant_type=${grantType}&client_id=${clientID}&client_secret=${clientSecret}`;
+  let body = `grant_type=${grantType}&client_id=${clientID}&client_secret=${clientSecret}`;
   if (code) {
     body += `&code=${code}&redirect_uri=${redirect}`;
   }
