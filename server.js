@@ -136,21 +136,17 @@ app.get("/spotify-callback", async (req, res) => {
 
     const resp = await playlist.json();
     const playlistItems = resp.items;
-    //     const playlistURIs = [];
-    //     const tobeAdded = [];
+    const playlistURIs = [];
+    const tobeAdded = [];
 
-    //     playlistItems.map((song) => {
-    //       playlistURIs.push(song.track.uri);
-    //     });
+    playlistItems.map((song) => {
+      playlistURIs.push(song.track.uri);
+    });
 
-    //     uris.map((uri) => {
-    //       if (!playlistURIs.includes(uri)) {
-    //         tobeAdded.push(uri);
-    //       }
-    //     });
-
-    const tobeAdded = playlistItems.filter((item) => {
-      !uris.includes(item.track.uri);
+    uris.map((uri) => {
+      if (!playlistURIs.includes(uri)) {
+        tobeAdded.push(uri);
+      }
     });
 
     console.log("These are to be added", tobeAdded);
