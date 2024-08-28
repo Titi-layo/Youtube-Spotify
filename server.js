@@ -184,16 +184,17 @@ app.get("/spotify-callback", async (req, res) => {
 
     const newPlaylist = await playlist.json();
 
-    fetch(`https://api.spotify.com/v1/playlists/${newPlaylist.id}/tracks`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token.access_token}`,
-        // 'Content-Type' : 'application/json'
-      },
-      body: JSON.stringify({ uris: uris }),
-    })
-      .then((res) => res.json())
-      .then((val) => console.log(val));
+    resp = await fetch(
+      `https://api.spotify.com/v1/playlists/${newPlaylist.id}/tracks`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token.access_token}`,
+          // 'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({ uris: uris }),
+      }
+    );
   }
 
   res.redirect(process.env.end);
