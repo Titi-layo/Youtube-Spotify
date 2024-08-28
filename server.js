@@ -184,7 +184,7 @@ app.get("/spotify-callback", async (req, res) => {
     fetch(`https://api.spotify.com/v1/playlists/${newPlaylist.id}/tracks`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${newAccessToken}`,
+        Authorization: `Bearer ${token.access_token}`,
         // 'Content-Type' : 'application/json'
       },
       body: JSON.stringify({ uris: uris }),
