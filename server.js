@@ -152,6 +152,8 @@ app.get("/spotify-callback", async (req, res) => {
       !uris.includes(item.track.uri);
     });
 
+    console.log("These are to be added", tobeAdded);
+
     if (tobeAdded.length !== 0) {
       const output = await addToPlaylist(
         existingPlaylist.id,
