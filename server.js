@@ -97,6 +97,7 @@ app.get("/getSpotifyUris/", async (req, res) => {
 
   uris = await Promise.all(uriPromise);
 
+  console.log("These are the uris", uris);
   res.redirect(
     `https://accounts.spotify.com/authorize?client_id=${process.env.clientId}&response_type=code&redirect_uri=${process.env.spotifyAuth}&scope=${SPOTIFY_SCOPE}`
   );
