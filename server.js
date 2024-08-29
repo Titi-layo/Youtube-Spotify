@@ -151,7 +151,7 @@ app.get("/spotify-callback", async (req, res) => {
     });
 
     uris.map((uri) => {
-      if (!playlistURIs.includes(uri)) {
+      if (uri && !playlistURIs.includes(uri)) {
         tobeAdded.push(uri);
       }
     });
