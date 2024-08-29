@@ -89,7 +89,7 @@ app.get("/getSpotifyUris/", async (req, res) => {
       console.log(searchResponse);
     }
 
-    if (searchResponse.status === 200) {
+    if (searchResponse.ok === 200) {
       const searchResult = await searchResponse.json();
 
       if (searchResult.tracks.items.length !== 0) {
