@@ -97,7 +97,6 @@ app.get("/getSpotifyUris/", async (req, res) => {
       console.log("This is the searchjson", searchResult);
       if (searchResult.tracks.items.length !== 0) {
         return searchResult.tracks.items[0].uri;
-        //   uris.push(vals.tracks.items[0].uri);
       }
     }
   });
@@ -193,7 +192,6 @@ app.get("/spotify-callback", async (req, res) => {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token.access_token}`,
-          // 'Content-Type' : 'application/json'
         },
         body: JSON.stringify({ uris: uris }),
       }
@@ -201,14 +199,10 @@ app.get("/spotify-callback", async (req, res) => {
   }
 
   res.redirect(process.env.end);
-
-  //   createPlaylist().then(() => {
-  //     res.redirect(process.env.end);
-  //   });
 });
 
 app.get("/end", function (req, res) {
-  res.send("You reached the end :)");
+  res.sendFile("/end.html");
 });
 
 app.listen(PORT);
