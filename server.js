@@ -22,7 +22,7 @@ let uris = [];
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function (req, res) {
-  res.sendFile("/hkjh.html");
+  res.sendFile("/end.html");
 });
 
 app.get("/youtube-authorize", function (req, res) {
