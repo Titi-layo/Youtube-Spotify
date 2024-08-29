@@ -86,14 +86,14 @@ app.get("/getSpotifyUris/", async (req, res) => {
     );
 
     if (!searchResponse.ok) {
-      console.log("This is the serachResponse", searchResponse);
+      console.log("This is the searchResponse", searchResponse);
       const err = await searchResponse.json();
       console.log("This is the error", err);
     }
 
     if (searchResponse.ok) {
       const searchResult = await searchResponse.json();
-
+      console.log("This is the searchjson", searchResult);
       if (searchResult.tracks.items.length !== 0) {
         return searchResult.tracks.items[0].uri;
         //   uris.push(vals.tracks.items[0].uri);
