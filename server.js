@@ -26,9 +26,10 @@ app.get("/", function (req, res) {
 });
 
 app.get("/youtube-authorize", function (req, res) {
-  res.redirect(
-    `https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.youtubeClientId}&redirect_uri=${process.env.youtubeRedirectUri}&response_type=code&scope=${YOUTUBE_SCOPE}`
-  );
+  res.sendFile("/hkjh.html");
+  //   res.redirect(
+  //     `https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.youtubeClientId}&redirect_uri=${process.env.youtubeRedirectUri}&response_type=code&scope=${YOUTUBE_SCOPE}`
+  //   );
 });
 
 app.get("/youtube-callback/", async (req, res) => {
