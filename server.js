@@ -19,7 +19,7 @@ const getInfo = require("get-artist-title");
 const likedDetails = [];
 let uris = [];
 
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "./public")));
 
 app.get("/", function (req, res) {
   res.sendFile("/index.html");
@@ -202,7 +202,7 @@ app.get("/spotify-callback", async (req, res) => {
 });
 
 app.get("/end", function (req, res) {
-  res.sendFile("end.html");
+  res.sendFile("/end.html");
 });
 
 app.listen(PORT);
