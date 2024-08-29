@@ -56,7 +56,7 @@ app.get("/youtube-callback/", async (req, res) => {
   likedVideos.items.map((video) => {
     if (video.snippet.categoryId === "10") {
       let details = getInfo(video.snippet.title);
-      console.log("This is the video", video);
+      console.log("This is the video", video.snippet.title);
       console.log("These are the details", details);
       if (details) {
         likedDetails.push({ artist: details[0], song: details[1] });
