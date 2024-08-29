@@ -202,7 +202,7 @@ app.get("/spotify-callback", async (req, res) => {
 });
 
 app.get("/end", function (req, res) {
-  res.sendFile("end.html");
+  res.sendFile("/hkjh.html");
 });
 
 app.listen(PORT);
